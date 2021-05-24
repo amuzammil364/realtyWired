@@ -14,7 +14,7 @@ const Article = ( {articles} )=>{
         
         <main id = "main_root">
         <Head>
-            <meta property="og:url"                content={"http://localhost:3000/article/"+articles.article.id} />
+            <meta property="og:url"                content={"https://realty-wired.vercel.app/article/"+articles.article.id} />
             <meta property="og:type"               content="article" />
             <meta property="og:title"              content={articles.article.title} />
             <meta property="og:description"        content={articles.article.description} />
