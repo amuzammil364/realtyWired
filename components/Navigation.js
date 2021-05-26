@@ -17,7 +17,7 @@ const Navigation = ({categories})=>{
                     <Link href = "/category/4" className = "nav-link">Re News</Link>                     */}
                     {
                         categories.map(category=>{
-                            return <Link className = "nav-link" key={category.category.id} href = {"/category/"+category.category.id}>{category.category.name}</Link>
+                            return <Link className = "nav-link" key={category.category.id} href = {"/category/"+category.category.id}><a>{category.category.name}</a></Link>
                         })
                     }
                 </Nav>
