@@ -2,10 +2,11 @@
   "name": "realtywired",
   "version": "0.1.0",
   "private": true,
+  "main":"",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "bootstrap": "^5.0.1",
