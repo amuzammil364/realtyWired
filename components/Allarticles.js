@@ -12,6 +12,7 @@ const Allarticles = ({articles})=>{
         let modal_video_source = document.getElementById('modal_video_source');
         modal_video_source.setAttribute('src',videoo_link);
         console.log(player);
+        player.load();
         player.play();
         
     }
