@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 const Navigation = ({categories})=>{
-    console.log(categories);
+    // console.log(categories);
     return (
         <Navbar expand="lg">
         <Link href = "/" className = "navbar-brand"><a><img className = "site_logo" src = "/logo.png"/></a></Link>

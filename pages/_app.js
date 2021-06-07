@@ -5,8 +5,23 @@ import Footer from "../components/Footer";
 import App from "next/app";
 
 function MyApp({ Component, pageProps }) {
-  return <>
+ 
+ const closeModal =(e)=>{
+  let RW_video_modal = document.getElementById('RW_video_modal');
+  RW_video_modal.classList.remove('active');
+  let player = e.target.parentNode.childNodes[1];
+  console.log(player);
+  player.pause();
+}
+ return <>
   <Component {...pageProps} />
+  <div className = "RW_video_modal" id = "RW_video_modal">
+        <button id = "modal_video_close" onClick = {closeModal}>x</button>
+          <video id = "modal_video" width="" height="" controls>
+              <source id = "modal_video_source" src="https://player.vimeo.com/external/451677234.sd.mp4?s=1c4d9d51bd963272a2b93442c45974d2b872090d&profile_id=164" type="video/mp4"/>
+          </video>                                                    
+    </div>
+
   <Footer/>
   </>
 }
