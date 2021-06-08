@@ -3,7 +3,7 @@ import { Button, Navbar, Nav, NavDropdown, Container, Card, Row, Col } from 'rea
 import Link from "next/link";
 
 const Categoryarticles = ({articles})=>{
-    // console.log(articles)
+    console.log(articles)
     const openModal =(e)=>{
         let RW_video_modal = document.getElementById('RW_video_modal');
         RW_video_modal.classList.add('active');
