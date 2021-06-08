@@ -1,9 +1,10 @@
 import React from "react";
 import { Button, Navbar, Nav, NavDropdown, Container, Card, Row, Col } from 'react-bootstrap';
 import Link from "next/link";
+import parse from 'html-react-parser';
 
 const Singlearticle = ({article})=>{
-    console.log(article);
+    // console.log(article);
 
     const openModal =(e)=>{
         let RW_video_modal = document.getElementById('RW_video_modal');
@@ -17,13 +18,6 @@ const Singlearticle = ({article})=>{
         player.play();
         
     }
-   
-    const filterStr = (str)=>{
-        str = str.toString();
-        str = str.replace( /(<([^>]+)>)/ig, '');
-        return str;
-    }
-
 
     let image00 = "";
     if(article.video_link!==""){
@@ -41,7 +35,7 @@ const Singlearticle = ({article})=>{
                         <Card.Body>
                             <Card.Title>{article.title}</Card.Title>
                             <p className = "text-center">
-                             {filterStr(article.description)}
+                             {parse(article.description)}
                             </p>
                         </Card.Body>
                     </Card>
